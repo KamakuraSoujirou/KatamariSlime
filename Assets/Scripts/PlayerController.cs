@@ -6,9 +6,10 @@ public class PlayerController : MonoBehaviour
     public float speed = 7f;
     public float growthRate = 0.1f; 
     public float lookSensitivity = 1f;
+    public float jumpForce = 20f;
 
     // ★追加：Cinemachineに追いかけさせるターゲット
-    [Tooltip("CinemachineのFollowに設定するターゲット（空のオブジェクト等）を割り当ててください")]
+    [Tooltip("CinemachineのFollowに設定するターゲット")]
     public Transform cinemachineCameraTarget; 
 
     private Rigidbody rb;
@@ -21,6 +22,11 @@ public class PlayerController : MonoBehaviour
     private float _cinemachineTargetYaw;
     private float _cinemachineTargetPitch;
 
+    private bool IsGrounded()
+    {
+        return Physics.Raycast(transform.position, Vector3.down, 1.1f);
+    }
+
     void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -32,7 +38,7 @@ public class PlayerController : MonoBehaviour
 
     public void OnMove(InputAction.CallbackContext context)
     {
-        // 修正：ReadValueに変更
+
         Vector2 moveInput = context.ReadValue<Vector2>();
         moveX = moveInput.x;
         moveZ = moveInput.y;
@@ -40,15 +46,23 @@ public class PlayerController : MonoBehaviour
 
     public void OnLook(InputAction.CallbackContext context)
     {
-        // 修正：ReadValueに変更
+
         Vector2 lookInput = context.ReadValue<Vector2>();
         lookX = lookInput.x;
         lookY = lookInput.y;
     }
 
+    public void OnJump(InputAction.CallbackContext context)
+    {
+        if (context.performed && IsGrounded())
+        {
+            rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
+        }
+    }
+
     void FixedUpdate()
     {
-        // 移動処理は変更なし（Main Cameraの向いている方向を基準に移動する）
+
         Vector3 cameraForward = mainCameraTransform.forward;
         cameraForward.y = 0f; 
         cameraForward = cameraForward.normalized;
@@ -67,7 +81,7 @@ public class PlayerController : MonoBehaviour
 
     void LateUpdate() 
     {
-        // ターゲットが設定されていなければ処理しない
+
         if (cinemachineCameraTarget == null) return;
 
         _cinemachineTargetYaw += lookX * lookSensitivity;
@@ -75,7 +89,6 @@ public class PlayerController : MonoBehaviour
 
         _cinemachineTargetPitch = Mathf.Clamp(_cinemachineTargetPitch, -89f, 89f);
 
-        // ★変更：Main Cameraではなく、ターゲットオブジェクトを回転させる
         cinemachineCameraTarget.rotation = Quaternion.Euler(_cinemachineTargetPitch, _cinemachineTargetYaw, 0f);
     }
 
