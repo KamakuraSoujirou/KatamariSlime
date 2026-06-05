@@ -8,7 +8,6 @@ public class PlayerController : MonoBehaviour
     public float lookSensitivity = 1f;
     public float jumpForce = 20f;
 
-    // ★追加：Cinemachineに追いかけさせるターゲット
     [Tooltip("CinemachineのFollowに設定するターゲット")]
     public Transform cinemachineCameraTarget; 
 
@@ -22,6 +21,9 @@ public class PlayerController : MonoBehaviour
     private float _cinemachineTargetYaw;
     private float _cinemachineTargetPitch;
 
+    [Header("スライムのJointオブジェクト")]
+    [SerializeField] private Rigidbody[] _childRigidbodies;
+
     private bool IsGrounded()
     {
         return Physics.Raycast(transform.position, Vector3.down, 1.1f);
@@ -34,6 +36,7 @@ public class PlayerController : MonoBehaviour
 
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
+
     }
 
     public void OnMove(InputAction.CallbackContext context)
@@ -42,6 +45,31 @@ public class PlayerController : MonoBehaviour
         Vector2 moveInput = context.ReadValue<Vector2>();
         moveX = moveInput.x;
         moveZ = moveInput.y;
+
+
+        if (moveInput == Vector2.zero)
+        {
+            // 入力が無い時はSleepさせる
+            for (int i = 0; i < _childRigidbodies.Length; i++)
+            {
+                if (_childRigidbodies[i] != null)
+                {
+                   // _childRigidbodies[i].Sleep();
+                }
+            }
+        }
+        else
+        {
+            // 入力がある（移動し始めた）時はWakeUpで起こす
+            for (int i = 0; i < _childRigidbodies.Length; i++)
+            {
+                if (_childRigidbodies[i] != null)
+                {
+                    _childRigidbodies[i].WakeUp();
+                }
+            }
+        }
+
     }
 
     public void OnLook(InputAction.CallbackContext context)
@@ -62,7 +90,6 @@ public class PlayerController : MonoBehaviour
 
     void FixedUpdate()
     {
-
         Vector3 cameraForward = mainCameraTransform.forward;
         cameraForward.y = 0f; 
         cameraForward = cameraForward.normalized;
@@ -70,7 +97,8 @@ public class PlayerController : MonoBehaviour
         if (cameraForward != Vector3.zero)
         {
             Quaternion targetRotation = Quaternion.LookRotation(cameraForward);
-            rb.MoveRotation(targetRotation);
+            //rb.MoveRotation(targetRotation);
+            //Debug.Log(rb.rotation.eulerAngles);
         }
 
         Vector3 moveDirection = transform.forward * moveZ + transform.right * moveX;
