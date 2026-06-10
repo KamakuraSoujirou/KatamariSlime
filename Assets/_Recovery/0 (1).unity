@@ -119,11 +119,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &133465776 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 997893290992718494, guid: ea3e63dccabbf4448bc264f680a3a9c8, type: 3}
-  m_PrefabInstance: {fileID: 1295617892}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &410087039
 GameObject:
   m_ObjectHideFlags: 0
@@ -267,7 +262,6 @@ GameObject:
   - component: {fileID: 545236349}
   - component: {fileID: 545236354}
   - component: {fileID: 545236355}
-  - component: {fileID: 545236356}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -552,23 +546,6 @@ MonoBehaviour:
   blendDistance: 0
   weight: 1
   sharedProfile: {fileID: 11400000, guid: fa9932c2ed5b514498746ed34e4f8722, type: 2}
---- !u!114 &545236356
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 545236347}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b15f82cc229284894964d2d30806969d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Unity.XR.ARFoundation::UnityEngine.XR.ARFoundation.AROcclusionManager
-  m_HumanSegmentationStencilMode: 3
-  m_HumanSegmentationDepthMode: 2
-  m_EnvironmentDepthMode: 3
-  m_EnvironmentDepthTemporalSmoothing: 1
-  m_OcclusionPreferenceMode: 0
 --- !u!1 &732774822
 GameObject:
   m_ObjectHideFlags: 0
@@ -681,12 +658,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d592293327e9074ea02a356c7065ec4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlaceOnPlane
-  _spawnedObjects:
-  - {fileID: 1616469849}
-  - {fileID: 133465776}
-  - {fileID: 1534783444}
-  - {fileID: 1760856089}
-  - {fileID: 997893290992718494, guid: ea3e63dccabbf4448bc264f680a3a9c8, type: 3}
+  cubePrefab: {fileID: 997893290992718494, guid: ea3e63dccabbf4448bc264f680a3a9c8, type: 3}
 --- !u!1 &1008536958
 GameObject:
   m_ObjectHideFlags: 0
@@ -1018,7 +990,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 4e25dc388c394b347830281bddb339be, type: 2}
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1065,21 +1037,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1534783444 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 997893290992718494, guid: ea3e63dccabbf4448bc264f680a3a9c8, type: 3}
-  m_PrefabInstance: {fileID: 1052418020}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1616469849 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 997893290992718494, guid: ea3e63dccabbf4448bc264f680a3a9c8, type: 3}
-  m_PrefabInstance: {fileID: 2036408589}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1760856089 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 997893290992718494, guid: 891b46d734cbdc64c84bc7305a9819be, type: 3}
-  m_PrefabInstance: {fileID: 2097550313872506668}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2036408589
 PrefabInstance:
   m_ObjectHideFlags: 0

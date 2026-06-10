@@ -8,7 +8,10 @@ public class PlaceOnPlane : MonoBehaviour
 {
 
     [SerializeField]
-    private GameObject cubePrefab;
+    //private GameObject cubePrefab;
+    private GameObject[] _spawnedObjects;
+
+    private int _spawnedObjectIndex = 0;
 
     private ARRaycastManager arRaycastManager;
 
@@ -35,9 +38,10 @@ public class PlaceOnPlane : MonoBehaviour
 
                 if (arRaycastManager.Raycast(touch.position, hitResults, TrackableType.PlaneWithinPolygon))
                 {
+                    _spawnedObjectIndex = (_spawnedObjectIndex + 1) % _spawnedObjects.Length;
 
                     Pose hitPose = hitResults[0].pose;
-                    Instantiate(cubePrefab,hitPose.position, hitPose.rotation);
+                    Instantiate(_spawnedObjects[_spawnedObjectIndex],hitPose.position, hitPose.rotation);
                 }
             }
         }
