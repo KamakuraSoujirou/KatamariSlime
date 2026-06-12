@@ -23,13 +23,12 @@ public class FloatInSlime : MonoBehaviour
 
     void Update()
     {
-        // 1. ゆっくり回転させる
+
         transform.Rotate(rotateSpeed * Time.deltaTime);
 
-        // 2. サイン波を使って上下の揺れを計算
+
         float newY = startLocalPosition.y + Mathf.Sin(Time.time * floatSpeed + randomOffset) * amplitude;
 
-        // 3. 位置を更新（親オブジェクトであるスライムから見た相対的な位置）
         transform.localPosition = new Vector3(startLocalPosition.x, newY, startLocalPosition.z);
     }
 }
