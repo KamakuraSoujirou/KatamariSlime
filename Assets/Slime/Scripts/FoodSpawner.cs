@@ -5,8 +5,8 @@ using Touch = UnityEngine.InputSystem.EnhancedTouch.Touch;
 public class FoodSpawner : MonoBehaviour
 {
     public GameObject foodPrefab;
-    public float throwForce = 0.01f;
-    public float upwardForce = 0.01f;
+    public float throwForce = 0.005f;
+    public float upwardForce = 0.005f;
 
     private Vector2 startTouchPosition;
     private Vector2 endTouchPosition;
@@ -39,7 +39,7 @@ public class FoodSpawner : MonoBehaviour
         if (swipeVector.magnitude < 50f) // スワイプが短すぎる場合は無視
             return;
         Transform camTransform = Camera.main.transform;
-        Vector3 spawnPos = camTransform.position + camTransform.forward * 0.5f;
+        Vector3 spawnPos = camTransform.position + camTransform.forward * 0.3f;
         GameObject food = Instantiate(foodPrefab, spawnPos, Quaternion.identity);
         Rigidbody rb = food.GetComponent<Rigidbody>();
         if (rb != null)

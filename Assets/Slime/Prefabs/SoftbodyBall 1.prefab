@@ -256,6 +256,7 @@ GameObject:
   - component: {fileID: 212664708449137285}
   - component: {fileID: 197321866630225736}
   - component: {fileID: 2904549150035844294}
+  - component: {fileID: 5533901474907899658}
   m_Layer: 0
   m_Name: SoftbodyBall
   m_TagString: Player
@@ -479,6 +480,22 @@ SpringJoint:
   m_EnablePreprocessing: 1
   m_MassScale: 1
   m_ConnectedMassScale: 1
+--- !u!114 &5533901474907899658
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3276341374301699909}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e966a7c5bbe2b044b90759caa68f30fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SlimeAI
+  jumpForce: 10
+  upwardForce: 10
+  jumpInterval: 0.01
+  rotationSpeed: 5
 --- !u!1 &3655960804860372026
 GameObject:
   m_ObjectHideFlags: 0

@@ -19,6 +19,8 @@ public class FloatInSlime : MonoBehaviour
 
         // 全てのアイテムが同じタイミングで同じ動きをすると不自然なので、タイミングをランダムにずらす
         randomOffset = Random.Range(0f, 100f);
+
+        gameObject.tag = "InSlime"; // タグをFoodに設定
     }
 
     void Update()
