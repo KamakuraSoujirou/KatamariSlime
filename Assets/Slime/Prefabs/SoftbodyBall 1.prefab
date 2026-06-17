@@ -349,7 +349,7 @@ SpringJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
   m_ConnectedAnchor: {x: 0, y: 0, z: 0}
-  m_Spring: 50
+  m_Spring: 100
   m_Damper: 0.1
   m_MinDistance: 0
   m_MaxDistance: 0
@@ -373,7 +373,7 @@ SpringJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
   m_ConnectedAnchor: {x: 0, y: 0, z: 0}
-  m_Spring: 50
+  m_Spring: 100
   m_Damper: 0.1
   m_MinDistance: 0
   m_MaxDistance: 0
@@ -397,7 +397,7 @@ SpringJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
   m_ConnectedAnchor: {x: 0, y: 0, z: 0}
-  m_Spring: 50
+  m_Spring: 100
   m_Damper: 0.1
   m_MinDistance: 0
   m_MaxDistance: 0
@@ -421,7 +421,7 @@ SpringJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
   m_ConnectedAnchor: {x: 0, y: 0, z: 0}
-  m_Spring: 50
+  m_Spring: 100
   m_Damper: 0.1
   m_MinDistance: 0
   m_MaxDistance: 0
@@ -445,7 +445,7 @@ SpringJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
   m_ConnectedAnchor: {x: 0, y: 0, z: 0}
-  m_Spring: 50
+  m_Spring: 100
   m_Damper: 0.1
   m_MinDistance: 0
   m_MaxDistance: 0
@@ -469,7 +469,7 @@ SpringJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
   m_ConnectedAnchor: {x: 0, y: 0, z: 0}
-  m_Spring: 50
+  m_Spring: 100
   m_Damper: 0.1
   m_MinDistance: 0
   m_MaxDistance: 0
@@ -492,10 +492,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e966a7c5bbe2b044b90759caa68f30fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SlimeAI
-  jumpForce: 10
-  upwardForce: 10
-  jumpInterval: 0.01
+  moveSpeed: 1.5
   rotationSpeed: 5
+  stopDistance: 0.1
+  targetFood: {fileID: 0}
 --- !u!1 &3655960804860372026
 GameObject:
   m_ObjectHideFlags: 0
