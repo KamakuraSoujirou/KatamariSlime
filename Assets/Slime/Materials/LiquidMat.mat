@@ -95,7 +95,7 @@ Material:
     m_Ints: []
     m_Floats:
     - _AddPrecomputedVelocity: 0
-    - _Alpha: 0
+    - _Alpha: 1
     - _AlphaClip: 0
     - _AlphaToMask: 0
     - _Blend: 0
@@ -108,7 +108,7 @@ Material:
     - _Cutoff: 0.5
     - _DetailAlbedoMapScale: 1
     - _DetailNormalMapScale: 1
-    - _DistortionSpeed: 13.15
+    - _DistortionSpeed: 9.98
     - _DstBlend: 10
     - _DstBlendAlpha: 10
     - _EnableExternalAlpha: 0
@@ -137,7 +137,7 @@ Material:
     - _XRMotionVectorsPass: 1
     - _ZWrite: 0
     m_Colors:
-    - _BaseColor: {r: 0, g: 2.9960783, b: 2.7845364, a: 1}
+    - _BaseColor: {r: 0, g: 0.7490196, b: 0.69613415, a: 1}
     - _BottomColor: {r: 0, g: 0.009706191, b: 0.7490196, a: 1}
     - _Color: {r: 0, g: 1, b: 0.8715835, a: 1}
     - _Color_1: {r: 0.37447113, g: 1.2713932, b: 1.4562767, a: 1}
