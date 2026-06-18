@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 9183946875710912411}
   - component: {fileID: 2163630084921768549}
   m_Layer: 0
-  m_Name: SoftbodyBall 1
+  m_Name: SoftbodyBallAR
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
