@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9183946875710912411}
   - component: {fileID: 2163630084921768549}
+  - component: {fileID: 2173405721615365000}
   m_Layer: 0
   m_Name: SoftbodyBall
   m_TagString: Player
@@ -56,6 +57,20 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &2173405721615365000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 997893290992718494}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 886ecd2042e49f8449b123dfe8666dbe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FallBoundary
+  isSlime: 0
+  fallDistance: 1.5
 --- !u!1 &1549583604050309764
 GameObject:
   m_ObjectHideFlags: 0
@@ -1110,7 +1125,7 @@ ParticleSystem:
   m_GameObject: {fileID: 6915660966479091427}
   serializedVersion: 8
   lengthInSec: 10
-  simulationSpeed: 1
+  simulationSpeed: 0.43
   stopAction: 0
   cullingMode: 0
   ringBufferMode: 0
@@ -1184,8 +1199,8 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 2
-      minScalar: 1
+      scalar: 1.5
+      minScalar: 0.5
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -1355,8 +1370,8 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 0.5
-      minScalar: 0.1
+      scalar: 0.3
+      minScalar: 0.05
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -1733,7 +1748,7 @@ ParticleSystem:
     serializedVersion: 6
     enabled: 1
     type: 4
-    angle: 18.88
+    angle: 17.86
     length: 5
     boxThickness: {x: 0, y: 0, z: 0}
     radiusThickness: 1
@@ -1819,7 +1834,7 @@ ParticleSystem:
     sphericalDirectionAmount: 0
     randomPositionAmount: 0
     radius:
-      value: 4.32
+      value: 1
       mode: 0
       spread: 0
       speed:

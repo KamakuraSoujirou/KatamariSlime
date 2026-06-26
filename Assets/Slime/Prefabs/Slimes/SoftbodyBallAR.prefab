@@ -257,6 +257,7 @@ GameObject:
   - component: {fileID: 197321866630225736}
   - component: {fileID: 2904549150035844294}
   - component: {fileID: 5533901474907899658}
+  - component: {fileID: 1128383173866054177}
   m_Layer: 0
   m_Name: SoftbodyBall
   m_TagString: Player
@@ -496,6 +497,20 @@ MonoBehaviour:
   rotationSpeed: 5
   stopDistance: 0.1
   targetFood: {fileID: 0}
+--- !u!114 &1128383173866054177
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3276341374301699909}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 886ecd2042e49f8449b123dfe8666dbe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FallBoundary
+  isSlime: 1
+  fallDistance: 1.5
 --- !u!1 &3655960804860372026
 GameObject:
   m_ObjectHideFlags: 0

@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 8039828863801261263}
   - component: {fileID: 5643530199905139939}
   - component: {fileID: 1928633068946578973}
+  - component: {fileID: 8713958605589180448}
   m_Layer: 0
   m_Name: Food
   m_TagString: Food
@@ -141,3 +142,17 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300000, guid: 3882ee1bc1bdf284b8872917c3979145, type: 3}
+--- !u!114 &8713958605589180448
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2960126623514800204}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 886ecd2042e49f8449b123dfe8666dbe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FallBoundary
+  isSlime: 0
+  fallDistance: 1.5
