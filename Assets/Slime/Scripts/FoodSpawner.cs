@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem.EnhancedTouch;
+using UnityEngine.XR.ARFoundation;
 using Touch = UnityEngine.InputSystem.EnhancedTouch.Touch;
 
 public class FoodSpawner : MonoBehaviour
@@ -11,15 +12,26 @@ public class FoodSpawner : MonoBehaviour
     private Vector2 startTouchPosition;
     private Vector2 endTouchPosition;
 
+    [SerializeField]
+    private ModeManager modeManager;
+
     void Start()
     {
         EnhancedTouchSupport.Enable();
+
+        // インスペクタで未割当ならシーン内から検索して自動設定
+        if (modeManager == null)
+        {
+            modeManager = FindObjectsByType<ModeManager>()[0];
+        }
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(Touch.activeTouches.Count > 0)
+        if (modeManager == null || modeManager.currentMode != ModeManager.GameMode.FeedSlime) return;
+        if (Touch.activeTouches.Count > 0)
         {
             var touch = Touch.activeTouches[0];
             if (touch.phase == UnityEngine.InputSystem.TouchPhase.Began)
