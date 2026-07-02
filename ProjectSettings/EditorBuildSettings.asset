@@ -6,16 +6,16 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 0
-    path: Assets/Slime/Scenes/SlimeTest.unity
+    path: Assets/_Slime/Scenes/SlimeTest.unity
     guid: 99c9720ab356a0642a771bea13969a05
   - enabled: 1
-    path: Assets/Slime/Scenes/SlimeAR 1.unity
+    path: Assets/_Slime/Scenes/SlimeAR 1.unity
     guid: ddbba2a415a478948a0b037d049cc362
   m_configObjects:
-    UnityEditor.XR.ARCore.ARCoreSettings: {fileID: 11400000, guid: 6a782eb820bb8ac46ac22d97210e87e6, type: 2}
-    UnityEditor.XR.ARKit.ARKitSettings: {fileID: 11400000, guid: 492aa8f61b1e96c4b8fdd03ad9fdcb5d, type: 2}
+    UnityEditor.XR.ARCore.ARCoreSettings: {fileID: 11400000, guid: 944d387bc0d6e5045a9ba9cb28b6aa39, type: 2}
+    UnityEditor.XR.ARKit.ARKitSettings: {fileID: 11400000, guid: 1beae9ae74bbc0c43851d5d2158e06b7, type: 2}
     com.unity.input.settings: {fileID: 11400000, guid: 69df5070f74b12a4fb9fe6f78236b8d7, type: 2}
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
-    com.unity.xr.arfoundation.simulation_settings: {fileID: 11400000, guid: a6a016a10b14f7d408bf1e521e99a1bf, type: 2}
+    com.unity.xr.arfoundation.simulation_settings: {fileID: 11400000, guid: 76e3b463333b531468473cb7e896b03c, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: fdc4f5d045269c0489cd5f453a4bc0e5, type: 2}
-    com.unity.xr.openxr.settings4: {fileID: 11400000, guid: 2f5a482fec26c604fb0a8ad822f280aa, type: 2}
+    com.unity.xr.openxr.settings4: {fileID: 11400000, guid: 14a97a516d44a414cbc8a36ca8b98fec, type: 2}
