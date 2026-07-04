@@ -2011,7 +2011,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 545236347}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b15f82cc229284894964d2d30806969d, type: 3}
   m_Name: 
@@ -5514,7 +5514,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u990C\u3084\u308A"
+  m_text: "\u3075\u308C\u3042\u3044"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5f930afb26974d946b33824db6d0725f, type: 2}
   m_sharedMaterial: {fileID: 6790765065126302991, guid: 5f930afb26974d946b33824db6d0725f, type: 2}
@@ -5541,7 +5541,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 10.1
+  m_fontSize: 7.5
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1

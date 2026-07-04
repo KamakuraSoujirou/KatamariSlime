@@ -1,7 +1,7 @@
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody))]
-public class SlimeAI : MonoBehaviour
+public class SlimeNPC: MonoBehaviour
 {
     [Header("移動設定")]
     public float moveSpeed = 1.5f;     // 滑るスピード
@@ -115,4 +115,17 @@ public class SlimeAI : MonoBehaviour
         // 4. 浮遊スクリプトの追加
         inSlime.AddComponent<FloatInSlime>();
     }
+
+    public void JoyReaction()
+    {
+        if (rb != null)
+        {
+            // 連続でタップしても宇宙まで飛んでいかないように、一度Y軸（上下）の速度をリセット
+            rb.linearVelocity = new Vector3(rb.linearVelocity.x, 0, rb.linearVelocity.z);
+
+            // ピョンッと上方向に跳ねる（数値はスライムの重さに合わせて調整してください）
+            rb.AddForce(Vector3.up * 4.0f, ForceMode.Impulse);
+        }
+    }
+
 }
