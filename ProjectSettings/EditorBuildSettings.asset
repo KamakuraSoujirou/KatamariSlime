@@ -5,11 +5,11 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: Assets/_Slime/Scenes/SlimeTest.unity
-    guid: 99c9720ab356a0642a771bea13969a05
   - enabled: 1
-    path: Assets/_Slime/Scenes/SlimeAR 1.unity
+    path: Assets/_Slime/Scenes/SlimeAR_Title.unity
+    guid: 5b3be40051d7d0d439975094b9ad34d1
+  - enabled: 1
+    path: Assets/_Slime/Scenes/SlimeAR_Main.unity
     guid: ddbba2a415a478948a0b037d049cc362
   m_configObjects:
     UnityEditor.XR.ARCore.ARCoreSettings: {fileID: 11400000, guid: 944d387bc0d6e5045a9ba9cb28b6aa39, type: 2}

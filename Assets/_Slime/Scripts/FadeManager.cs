@@ -24,6 +24,7 @@ public class FadeManager : MonoBehaviour
             // .OnComplete の中身は、アニメーションが「終わった瞬間」に実行されます
             fadeImage.gameObject.SetActive(false);
         });
+
     }
 
     // スタートボタンなどから呼び出されるメソッド
