@@ -5,7 +5,7 @@ using DG.Tweening;
 
 public class FadeManager : MonoBehaviour
 {
-    [Header("フェード用の黒い画像")]
+    [Header("フェード用の画像")]
     public Image fadeImage;
 
     [Header("フェードにかかる時間（秒）")]
@@ -39,6 +39,19 @@ public class FadeManager : MonoBehaviour
         fadeImage.DOFade(1f, fadeDuration).OnComplete(() =>
         {
             SceneManager.LoadScene(sceneName);
+        });
+    }
+
+    public void PhotoFlash()
+    {
+
+        fadeImage.gameObject.SetActive(true);
+        fadeImage.color = new Color(1, 1, 1, 1);
+
+        // --- フェードイン（真っ白から透明へ） ---
+        fadeImage.DOFade(0f, 0.5f).OnComplete(() =>
+        {
+            fadeImage.gameObject.SetActive(false);
         });
     }
 }

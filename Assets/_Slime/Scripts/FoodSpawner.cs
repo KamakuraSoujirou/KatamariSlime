@@ -48,7 +48,7 @@ public class FoodSpawner : MonoBehaviour
     private void ThrowFood(Vector2 start, Vector2 end)
     {
         Vector2 swipeVector = end - start;
-        if (swipeVector.magnitude < 50f) // スワイプが短すぎる場合は無視
+        if (swipeVector.magnitude < 100f) // スワイプが短すぎる場合は無視
             return;
         Transform camTransform = Camera.main.transform;
         Vector3 spawnPos = camTransform.position + camTransform.forward * 0.3f;
