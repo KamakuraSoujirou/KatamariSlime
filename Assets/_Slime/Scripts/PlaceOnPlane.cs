@@ -9,8 +9,8 @@ using TouchPhase = UnityEngine.InputSystem.TouchPhase;
 public class PlaceOnPlane : MonoBehaviour
 {
     [SerializeField]
-    private GameObject[] _spawnedObjects;
-    private int _spawnedObjectIndex = 0;
+    private GameObject[] spawnedObjects;
+    private int spawnedObjectIndex = 0;
 
     private ARRaycastManager arRaycastManager;
     private List<ARRaycastHit> hitResults = new List<ARRaycastHit>();
@@ -65,11 +65,11 @@ public class PlaceOnPlane : MonoBehaviour
                     Pose hitPose = hitResults[0].pose;
 
                     // 1. スライムを生成
-                    GameObject newSlime = Instantiate(_spawnedObjects[_spawnedObjectIndex], hitPose.position, hitPose.rotation);
-                    _spawnedObjectIndex++;
-                    if (_spawnedObjectIndex >= _spawnedObjects.Length)
+                    GameObject newSlime = Instantiate(spawnedObjects[spawnedObjectIndex], hitPose.position, hitPose.rotation);
+                    spawnedObjectIndex++;
+                    if (spawnedObjectIndex >= spawnedObjects.Length)
                     {
-                        _spawnedObjectIndex = 0;
+                        spawnedObjectIndex = 0;
                     }
 
                         // 2. FCPで現在選択されている色を直接取得して、スライムに適用！
