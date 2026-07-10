@@ -31,7 +31,8 @@ public class FallBoundary : MonoBehaviour
         {
             if (isSlime)
             {
-                RespawnSlime();
+                //RespawnSlime();
+                Destroy(gameObject);
             }
             else
             {

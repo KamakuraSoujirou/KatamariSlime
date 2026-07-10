@@ -10,6 +10,9 @@ public class SlimeNPC: MonoBehaviour
 
     private Rigidbody rb;
     [SerializeField] private Transform targetFood;
+    [SerializeField] private GameObject heartParticle;
+    [SerializeField] private GameObject starParticle;
+    [SerializeField] private Animator eyesAnimator;
 
     void Start()
     {
@@ -114,6 +117,11 @@ public class SlimeNPC: MonoBehaviour
 
         // 4. 浮遊スクリプトの追加
         inSlime.AddComponent<FloatInSlime>();
+
+        //5. エフェクト
+        GameObject effect = Instantiate(heartParticle, inSlime.transform.position, Quaternion.identity);
+        eyesAnimator.SetTrigger("Heart");
+
     }
 
     public void JoyReaction()
@@ -124,6 +132,10 @@ public class SlimeNPC: MonoBehaviour
 
             rb.AddForce(Vector3.up * 20f, ForceMode.Impulse);
             Debug.Log("スライムが喜んでジャンプしました！");
+
+            GameObject effect = Instantiate(starParticle, transform.position + Vector3.up * 0.5f, Quaternion.identity);
+            eyesAnimator.SetTrigger("Star");
+
         }
     }
 
