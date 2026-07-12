@@ -39,7 +39,7 @@ Material:
     m_TexEnvs: []
     m_Ints: []
     m_Floats:
-    - _Alpha: 0
+    - _Alpha: 0.584
     - _Metallic: 1
     - _RimPower: 1
     - _Smoothness: 1

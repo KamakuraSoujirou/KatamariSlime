@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2204344243457501257}
   - component: {fileID: 4957333594036954111}
   - component: {fileID: 2641203455702310961}
+  - component: {fileID: 6526084089247019959}
   m_Layer: 5
   m_Name: CaptureImage
   m_TagString: Untagged
@@ -35,7 +36,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 10, y: -500}
-  m_SizeDelta: {x: 864, y: 1520}
+  m_SizeDelta: {x: 777.6, y: 1520}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!222 &4957333594036954111
 CanvasRenderer:
@@ -72,3 +73,17 @@ MonoBehaviour:
     y: 0
     width: 1
     height: 1
+--- !u!114 &6526084089247019959
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3503710288880809954}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86710e43de46f6f4bac7c8e50813a599, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.AspectRatioFitter
+  m_AspectMode: 0
+  m_AspectRatio: 0.5115789
